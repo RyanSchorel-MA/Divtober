@@ -1,0 +1,106 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: linear-gradient(to bottom right, rgb(115, 129, 75), rgb(0, 0, 0));
+    
+}
+
+
+
+
+html {
+    background-image: radial-gradient(ellipse at center, rgba(221, 240, 255, 1) 1%, rgba(242, 244, 249, 1) 100%);
+    box-shadow: inset 0 0 100px hsla(0, 0%, 0%, 0.3);
+    min-height: 100%;
+  }
+  
+  .steve {
+    width: 160px;
+    height: 160px;
+    overflow: hidden;
+    margin: 5% auto;
+    position: relative;
+    box-sizing: border-box;
+    border-top: 20px solid #2F200D;
+    background-color: #B8856A;
+    background-image: linear-gradient(180deg, transparent 16.666%, rgba(0, 0, 0, 0.1) 16.666%),
+      linear-gradient(180deg, transparent 33.333%, rgba(0, 0, 0, 0.1) 33.333%),
+      linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, 0.1) 50%),
+      linear-gradient(180deg, transparent 66.666%, rgba(0, 0, 0, 0.1) 66.666%),
+      linear-gradient(180deg, transparent 83.333%, rgba(0, 0, 0, 0.1) 83.333%),
+      linear-gradient(180deg, transparent 100%, rgba(0, 0, 0, 0.1) 100%);
+  }
+  
+  .steve:after,
+  .steve:before {
+    content: " ";
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 20px solid #463C6E;
+    border-width: 0 20px 0 0;
+    position: absolute;
+    left: 20px;
+    top: 40px;
+    box-shadow: -40px -40px 0 #2F200D, 40px 40px #9F574B;
+  }
+  
+  .steve:after {
+    left: 100px;
+    border-width: 0 0 0 20px;
+    box-shadow: 40px -40px 0 #2F200D, -40px 20px #7C4B44;
+  }
+  
+  .steve span {
+    position: absolute;
+    left: 40px;
+    bottom: 0;
+    background-color: #4D2B10;
+    width: 80px;
+    height: 20px;
+  }
+  
+  .steve span:after,
+  .steve span:before {
+    content: " ";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #4D2B10;
+    left: 0;
+    top: -20px;
+  }
+  
+  .steve span:after {
+    left: 60px;
+  }
+  
+
+
+
+
+  body {
+    background: #FCE97F;
+    animation: fadeBackground 6s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes fadeBackground {
+
+	0%   { background: rgb(255, 255, 255); }
+	20%  { background: #000000; }
+	40%  { background: #ffffff; }
+	60%  { background: #000000; }
+	80%  { background: #ffffff; }
+	100% { background: #000000; }
+
+}
+
+.square {
+  animation: color 9s infinite linear;
+  text-align: center;
+  padding: 2rem;
+}
