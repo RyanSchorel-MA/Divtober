@@ -1,0 +1,90 @@
+@use 'variables';
+@use 'mixins';
+
+
+
+html {
+    background-image: radial-gradient(ellipse at center, rgba(221, 240, 255, 1) 1%, rgba(242, 244, 249, 1) 100%);
+    box-shadow: inset 0 0 100px hsla(0, 0%, 0%, 0.3);
+    min-height: 100%;
+  }
+  
+  .steve {
+    width: 160px;
+    height: 160px;
+    overflow: hidden;
+    margin: 5% auto;
+    position: relative;
+    box-sizing: border-box;
+    border-top: 20px solid variables.$head;
+    background-color: variables.$huidskleur;
+
+  }
+  
+  .steve:after,
+  .steve:before {
+    content: " ";
+    @include  mixins.WidthHeight;
+    background-color: variables.$oog;
+    border: 20px solid variables.$pupil;
+    border-width: 0 20px 0 0;
+    position: absolute;
+    left: 20px;
+    top: 40px;
+    box-shadow: -40px -40px 0 variables.$naam, 40px 40px variables.$neusBeneden;
+  }
+  
+  .steve:after {
+    left: 100px;
+    border-width: 0 0 0 20px;
+    box-shadow: 40px -40px 0 variables.$naam, -40px 20px variables.$neusBoven;
+  }
+  
+  .steve span {
+    position: absolute;
+    left: 40px;
+    bottom: 0;
+    background-color: variables.$background;
+    width: 80px;
+    height: 20px;
+  }
+  
+  .steve span:after,
+  .steve span:before {
+    content: " ";
+    position: absolute;
+    @include  mixins.WidthHeight;
+    background-color: variables.$baard;
+    left: 0;
+    top: -20px;
+  }
+  
+  .steve span:after {
+    left: 60px;
+  }
+  
+
+
+
+
+  body {
+    animation: fadeBackground 6s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes fadeBackground {
+
+	0%   { background: rgb(255, 255, 255); }
+	20%  { background: variables.$black; }
+	40%  { background: variables.$white; }
+	60%  { background: variables.$black; }
+	80%  { background: variables.$white; }
+	100% { background: variables.$black; }
+
+}
+
+.square {
+  animation: color 9s infinite linear;
+  text-align: center;
+  padding: 2rem;
+}
